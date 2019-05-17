@@ -12,6 +12,8 @@ echo ">>> Installing Docker"
 # -qq implies -y --force-yes
 # sudo apt-get install -qq lxc-docker
 
+sudo apt-get update
+
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 
