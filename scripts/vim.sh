@@ -2,23 +2,15 @@
 
 echo ">>> Setting up Vim"
 
-if [[ -z $1 ]]; then
-    github_url="https://raw.githubusercontent.com/fideloper/Vaprobash/master"
-else
-    github_url="$1"
-fi
 
 # Create directories needed for some .vimrc settings
 mkdir -p /home/vagrant/.vim/backup
 mkdir -p /home/vagrant/.vim/swap
 
-# Install Vundle and set owner of .vim files
-git clone https://github.com/gmarik/vundle.git /home/vagrant/.vim/bundle/vundle
-sudo chown -R vagrant:vagrant /home/vagrant/.vim
+sudo apt-get install vim
 
-# Grab .vimrc and set owner
-curl --silent -L $github_url/helpers/vimrc > /home/vagrant/.vimrc
-sudo chown vagrant:vagrant /home/vagrant/.vimrc
+mkdir ~/.vim_runtime
 
-# Install Vundle Bundles
-sudo su - vagrant -c 'vim +BundleInstall +qall'
+git clone --depth=1 https://github.com/dorton/vimrc.git ~/.vim_runtime
+sudo chown -R vagrant:vagrant /home/vagrant/.vim_runtime
+sudo sh ~/.vim_runtime/install_awesome_vimrc.sh
