@@ -2,7 +2,7 @@
 
 sudo apt-get install -qq zsh
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/dorton/oh-my-zsh/master/tools/install.sh)"
 
 
 echo "
@@ -14,6 +14,6 @@ ZSH_THEME='simple'
 alias dcup='docker-compose up'
 alias dcown='docker-compose down'
 alias dps='docker ps -a'
-alias zshconfig='vim /home/vagrant/.zshrc'
-alias ohmyzsh='vim /home/vagrant/.oh-my-zsh'
-" > /home/vagrant/.zshrc
+alias zshconfig='vim ~/.zshrc'
+alias ohmyzsh='vim ~/.oh-my-zsh'
+" > ~/.zshrc
