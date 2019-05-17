@@ -6,16 +6,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 
 echo "
-plugins=(colorize git github pj gpg-agent rails)
+plugins=(colorize git github gpg-agent rails)
 
 ZSH_THEME='simple'
 
 
-PROJECT_PATHS=(~/code)
-
 alias dcup='docker-compose up'
 alias dcown='docker-compose down'
 alias dps='docker ps -a'
-alias zshconfig='vim ~/.zshrc'
-alias ohmyzsh='vim ~/.oh-my-zsh'
-" > ~/.zshrc
+alias zshconfig='vim /home/vagrant/.zshrc'
+alias ohmyzsh='vim /home/vagrant/.oh-my-zsh'
+" > /home/vagrant/.zshrc
